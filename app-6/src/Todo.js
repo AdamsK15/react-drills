@@ -19,13 +19,13 @@ class Todo extends Component {
     }
 
     handleChange(val) {
-        console.log({ val })
+        // console.log({ val })
         this.setState({ userInput: val })
     }
 
     render() {
         let myList = this.state.myList.map((elem, index) => {
-            return elem
+            return <div>elem</div>
         })
 
         return (
@@ -35,7 +35,7 @@ class Todo extends Component {
                 <input value={this.state.userInput}
                     placeholder='Enter new task'
                     onChange={e => this.handleChange(e.target.value)} />
-                <button onClick={() => this.addToList}>Add</button>
+                <button onClick={() => this.addToList()}>Add</button>
                 {myList}
             </div>
 
